@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fairuz Samsuddin PruBSN Takaful</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        html { scroll-behavior: smooth; }
+        
         body { 
             font-family: 'Poppins', sans-serif; 
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -39,154 +41,93 @@
         }
         h1 { margin: 10px 0 5px 0; font-size: 24px; color: #1a1a1a; font-weight: 700; }
         .subtitle { color: #d32f2f; font-weight: 600; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
-        .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
+        
+        .social-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
         .social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #f0f2f5;
-            color: #333;
-            text-decoration: none;
-            font-size: 18px;
-            transition: all 0.2s ease;
+            display: flex; align-items: center; justify-content: center;
+            width: 40px; height: 40px; border-radius: 50%; background: #f0f2f5;
+            color: #333; text-decoration: none; font-size: 18px; transition: all 0.2s ease;
         }
         .social-icon:hover { background: #e4e6eb; transform: scale(1.1); }
-        .company-logo {
-            max-width: 180px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+        
+        .company-logo { max-width: 180px; height: auto; margin-bottom: 20px; }
         .bio-text { color: #555; margin-bottom: 30px; line-height: 1.6; font-size: 14px; }
-        .btn-row {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
+        
+        .btn-row { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
         .link-btn { 
-            display: block; 
-            background: #f8f9fa; 
-            color: #333; 
-            text-decoration: none; 
-            padding: 14px; 
-            border-radius: 50px; 
-            font-weight: 600; 
-            font-size: 15px;
-            border: 1px solid #e1e4e8;
-            transition: all 0.2s ease; 
+            display: block; background: #f8f9fa; color: #333; text-decoration: none; 
+            padding: 14px; border-radius: 50px; font-weight: 600; font-size: 15px;
+            border: 1px solid #e1e4e8; transition: all 0.2s ease; cursor: pointer;
         }
         .link-btn:hover { background: #e9ecef; }
-        .whatsapp-btn { background: #25D366; color: white; border: none; }
-        .whatsapp-btn:hover { background: #1ebd5a; }
-        .features-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
+        .whatsapp-btn { background: #075E54; color: white; border: none; }
+        .whatsapp-btn:hover { background: #128C7E; }
+        
+        .features-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; }
         .feature-item {
-            font-size: 11px;
-            font-weight: 600;
-            color: #444;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            flex: 1;
+            font-size: 11px; font-weight: 600; color: #444; display: flex;
+            flex-direction: column; align-items: center; gap: 5px; flex: 1;
         }
         .feature-item i { font-size: 18px; color: #0070f3; background: #e1f0ff; padding: 10px; border-radius: 50%; }
-        .section-title {
-            text-align: left;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        .section-subtitle {
-            text-align: left;
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 20px;
-        }
+
+        .section-title { text-align: left; font-size: 18px; font-weight: 700; margin-bottom: 5px; }
+        .section-subtitle { text-align: left; font-size: 12px; color: #777; margin-bottom: 20px; }
         .section-subtitle i { color: #d32f2f; }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 40px;
-        }
+        
+        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
         .grid-card {
-            background: #fff;
-            border: 1px solid #eaeaea;
-            padding: 15px 10px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: all 0.2s ease;
+            background: #fff; border: 1px solid #eaeaea; padding: 15px 10px;
+            border-radius: 12px; font-size: 13px; font-weight: 600; color: #333;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.2s ease; cursor: pointer;
         }
         .grid-card:hover { border-color: #0070f3; transform: translateY(-3px); }
+        .grid-card.active { border-color: #0070f3; background-color: #f0f7ff; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0, 112, 243, 0.15); }
         .grid-card i { font-size: 20px; color: #d32f2f; }
+
+        /* --- ADVANCED FORM STYLING --- */
         .form-section {
-            background: #f9fbff;
-            padding: 25px 20px;
-            border-radius: 16px;
-            text-align: left;
-            border: 1px solid #eef2f7;
-            margin-bottom: 30px;
+            background: #fff; padding: 30px 0 10px 0; text-align: left; margin-bottom: 30px;
+            border-top: 1px solid #eee;
         }
         .badge {
-            background: #ffebee;
-            color: #d32f2f;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 12px;
+            background: #fff8e1; color: #f5b041; padding: 6px 16px; border: 1px solid #fce4b3;
+            border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 15px;
         }
-        .form-section h3 { font-size: 18px; margin: 0 0 8px 0; color: #1a1a1a; }
-        .form-section p { font-size: 12px; margin-bottom: 20px; color: #555; }
-        input, select {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #dfe3e8;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-family: inherit;
-            font-size: 13px;
-            background-color: #fff;
+        .form-section h3 { font-size: 20px; margin: 0 0 10px 0; color: #1a1a1a; text-align: center; }
+        .form-section p { font-size: 12px; margin-bottom: 25px; color: #777; text-align: center; }
+        
+        /* Grid Layout for Form Fields */
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+        
+        /* Labels & Required Asterisk */
+        .form-label { font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
+        .required { color: #f5b041; }
+        
+        /* Inputs & Selects */
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%; padding: 12px; border: 1px solid #e1e4e8; border-radius: 8px;
+            box-sizing: border-box; font-family: inherit; font-size: 13px; background-color: #fff;
+            color: #333;
         }
-        input:focus, select:focus { outline: none; border-color: #0070f3; }
+        input::placeholder, textarea::placeholder { color: #adb5bd; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #0070f3; }
+        
+        /* Radio Buttons */
+        .radio-group { display: flex; gap: 15px; align-items: center; margin-top: 5px; }
+        .radio-group label { font-size: 13px; color: #333; font-weight: 400; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+        .radio-group input[type="radio"] { width: auto; margin: 0; cursor: pointer; accent-color: #0070f3; }
+        
+        textarea { resize: vertical; min-height: 80px; }
+
         .form-submit-btn {
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 10px;
+            width: 100%; padding: 14px; border-radius: 8px; font-size: 15px;
+            font-weight: 600; cursor: pointer; margin-top: 10px; background: #00a676;
         }
-        .footer {
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            font-size: 11px;
-            color: #888;
-            line-height: 1.5;
-        }
+        .form-submit-btn:hover { background: #008f65; }
+        
+        .footer { border-top: 1px solid #eee; padding-top: 20px; font-size: 10px; color: #999; line-height: 1.6; text-align: center; }
     </style>
 </head>
 <body>
@@ -214,97 +155,202 @@
         </div>
 
         <div class="features-row">
-            <div class="feature-item">
-                <i class="fas fa-shield-halved"></i>
-                <span>Patuh Syariah</span>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-mug-hot"></i>
-                <span>Sesi Santai</span>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-wallet"></i>
-                <span>Bajet Mesra</span>
-            </div>
+            <div class="feature-item"><i class="fas fa-shield-halved"></i><span>Patuh Syariah</span></div>
+            <div class="feature-item"><i class="fas fa-mug-hot"></i><span>Sesi Santai</span></div>
+            <div class="feature-item"><i class="fas fa-wallet"></i><span>Bajet Mesra</span></div>
         </div>
 
         <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
+        <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
         
-        <div class="grid-container">
-            <div class="grid-card">
-                <i class="fas fa-heartbeat"></i>
-                <span>Medical Card</span>
+        <!-- Interactive Grid -->
+        <div class="grid-container" id="planGrid">
+            <div class="grid-card" onclick="selectPlan('Medical Card', this)">
+                <i class="fas fa-heartbeat"></i><span>Medical Card</span>
             </div>
-            <div class="grid-card">
-                <i class="fas fa-gift"></i>
-                <span>Hibah</span>
+            <div class="grid-card" onclick="selectPlan('Hibah Takaful', this)">
+                <i class="fas fa-gift"></i><span>Hibah</span>
             </div>
-            <div class="grid-card">
-                <i class="fas fa-briefcase"></i>
-                <span>Income Protection</span>
+            <div class="grid-card" onclick="selectPlan('Income Protection', this)">
+                <i class="fas fa-briefcase"></i><span>Income Protection</span>
             </div>
-            <div class="grid-card">
-                <i class="fas fa-user-md"></i>
-                <span>Sakit Kritikal</span>
+            <div class="grid-card" onclick="selectPlan('Sakit Kritikal', this)">
+                <i class="fas fa-user-md"></i><span>Sakit Kritikal</span>
             </div>
         </div>
 
+        <!-- REPLICATED FORM SECTION -->
         <div class="form-section" id="borang-semakan">
-            <span class="badge">Konsultasi Percuma</span>
-            <h3>Semak Pelan Takaful Sesuai</h3>
-            <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp.</p>
+            <div style="text-align: center;">
+                <span class="badge">KONSULTASI PERCUMA</span>
+                <h3>Semak Pelan Takaful Sesuai</h3>
+                <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp <strong>[Your Name]</strong>.</p>
+            </div>
             
             <form id="takafulForm">
-                <input type="text" id="clientName" placeholder="Nama Penuh" required>
-                <input type="number" id="clientAge" placeholder="Umur (Tahun)" required>
                 
-                <select id="clientStatus" required>
-                    <option value="" disabled selected>Status Pekerjaan / Merokok</option>
-                    <option value="Bekerja (Tidak Merokok)">Bekerja (Tidak Merokok)</option>
-                    <option value="Bekerja (Merokok)">Bekerja (Merokok)</option>
-                    <option value="Pelajar / Suri Rumah">Pelajar / Suri Rumah</option>
-                    <option value="Bekerja Sendiri / Bisnes">Bekerja Sendiri / Bisnes</option>
-                </select>
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Nama Penuh <span class="required">*</span></label>
+                        <input type="text" id="clientName" placeholder="Contoh: Ahmad" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Tarikh Lahir <span class="required">*</span></label>
+                        <input type="text" id="clientDob" placeholder="Contoh: 12/05/1990" required>
+                    </div>
+                </div>
 
-                <select id="clientPlans" required>
-                    <option value="" disabled selected>Pilihan Yang Ingin Disemak</option>
-                    <option value="Bekerja (Tidak Merokok)">Medical Card</option>
-                    <option value="Bekerja (Merokok)">Hibah</option>
-                    <option value="Pelajar / Suri Rumah">Income Protection</option>
-                    <option value="Bekerja Sendiri / Bisnes">Sakit Kritikal</option>
-                </select>
+                <div class="form-group">
+                    <label class="form-label">No Telefon <span class="required">*</span></label>
+                    <input type="text" id="clientPhone" placeholder="Contoh: 0123456789" required>
+                </div>
 
-                <input type="number" id="clientBudget" placeholder="Anggaran Bajet Bulanan (RM)" required>
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Jantina <span class="required">*</span></label>
+                        <select id="clientGender" required>
+                            <option value="" disabled selected>Pilih</option>
+                            <option value="Lelaki">Lelaki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Merokok <span class="required">*</span></label>
+                        <select id="clientSmoker" required>
+                            <option value="" disabled selected>Pilih</option>
+                            <option value="Tidak">Tidak</option>
+                            <option value="Ya">Ya</option>
+                        </select>
+                    </div>
+                </div>
 
-                <button type="submit" class="link-btn whatsapp-btn form-submit-btn">Semak Sekarang</button>
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Pekerjaan <span class="required">*</span></label>
+                        <input type="text" id="clientJob" placeholder="Cth: Executive, Polis" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Status <span class="required">*</span></label>
+                        <select id="clientStatus" required>
+                            <option value="" disabled selected>Pilih</option>
+                            <option value="Bujang">Bujang</option>
+                            <option value="Berkahwin">Berkahwin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Pendapatan Tahunan (Annual Income) <span class="required">*</span></label>
+                    <select id="clientIncome" required>
+                        <option value="" disabled selected>Pilih Anggaran Pendapatan</option>
+                        <option value="Bawah RM24,000">Bawah RM24,000</option>
+                        <option value="RM24,000 - RM36,000">RM24,000 - RM36,000</option>
+                        <option value="RM36,000 - RM48,000">RM36,000 - RM48,000</option>
+                        <option value="RM48,000 - RM60,000">RM48,000 - RM60,000</option>
+                        <option value="RM60,000 ke atas">RM60,000 ke atas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Bajet Bulanan Selesa <span class="required">*</span></label>
+                    <select id="clientBudget" required>
+                        <option value="" disabled selected>Pilih Anggaran Bajet</option>
+                        <option value="RM50 - RM200">RM50 - RM200</option>
+                        <option value="RM201 - RM300">RM201 - RM300</option>
+                        <option value="RM301 - RM400">RM301 - RM400</option>
+                        <option value="RM401 ke atas">RM401 ke atas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Perlindungan Ingin Disemak <span class="required">*</span></label>
+                    <select id="clientPlan" required>
+                        <option value="" disabled selected>Pilih Perlindungan Utama</option>
+                        <option value="Medical Card">Medical Card</option>
+                        <option value="Hibah Takaful">Hibah Takaful</option>
+                        <option value="Income Protection">Income Protection</option>
+                        <option value="Sakit Kritikal">Sakit Kritikal</option>
+                        <option value="Pendidikan Anak">Pendidikan Anak</option>
+                        <option value="Belum Pasti / Nak Konsultasi">Belum Pasti / Nak Konsultasi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Adakah anda mempunyai polisi aktif?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="polisiAktif" value="Ya, sudah ada"> Ya, sudah ada</label>
+                        <label><input type="radio" name="polisiAktif" value="Tidak, belum ada" checked> Tidak, belum ada</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Mesej Tambahan (Optional)</label>
+                    <textarea id="clientMessage" placeholder="Tulis soalan atau nota khas anda di sini..."></textarea>
+                </div>
+
+                <button type="submit" class="link-btn form-submit-btn whatsapp-btn">Hantar Ke WhatsApp</button>
             </form>
         </div>
 
         <div class="footer">
-            <p>© 2026 Fairuz Samsuddin. Hak Cipta Terpelihara.</p>
-            <p>Pengantara Takaful Berdaftar dengan Prudential BSN Takaful Berhad.</p>
+            <p>© 2026 [Your Name]. Hak Cipta Terpelihara.<br>
+            Pengantara Takaful Berdaftar dengan [Your Company Name] Berhad.</p>
         </div>
 
     </div>
 
     <script>
+        function selectPlan(planName, clickedElement) {
+            var cards = document.querySelectorAll('.grid-card');
+            cards.forEach(function(card) {
+                card.classList.remove('active');
+            });
+            clickedElement.classList.add('active');
+
+            var planDropdown = document.getElementById('clientPlan');
+            planDropdown.value = planName;
+
+            document.getElementById('borang-semakan').scrollIntoView({ behavior: 'smooth' });
+        }
+
         document.getElementById('takafulForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
             
+            // Gather all new field data
             var name = document.getElementById('clientName').value;
-            var age = document.getElementById('clientAge').value;
+            var dob = document.getElementById('clientDob').value;
+            var phone = document.getElementById('clientPhone').value;
+            var gender = document.getElementById('clientGender').value;
+            var smoker = document.getElementById('clientSmoker').value;
+            var job = document.getElementById('clientJob').value;
             var status = document.getElementById('clientStatus').value;
+            var income = document.getElementById('clientIncome').value;
             var budget = document.getElementById('clientBudget').value;
+            var plan = document.getElementById('clientPlan').value;
+            var policy = document.querySelector('input[name="polisiAktif"]:checked').value;
+            var addMessage = document.getElementById('clientMessage').value;
             
             // ---> UPDATE YOUR PHONE NUMBER HERE <---
             var phoneNumber = "60176213432"; 
             
+            // Build the comprehensive WhatsApp message
             var message = "Hai, saya berminat untuk buat semakan pelan Takaful percuma. Ini butiran saya:\n\n" +
                           "👤 *Nama:* " + name + "\n" +
-                          "🎂 *Umur:* " + age + " tahun\n" +
-                          "💼 *Status:* " + status + "\n" +
-                          "💰 *Bajet:* RM" + budget + " sebulan\n\n" +
-                          "Mohon bantu saya untuk sediakan sebut harga (quotation) yang sesuai.";
+                          "📅 *Tarikh Lahir:* " + dob + "\n" +
+                          "📱 *No Telefon:* " + phone + "\n" +
+                          "🚻 *Jantina:* " + gender + " | 🚬 *Merokok:* " + smoker + "\n" +
+                          "💼 *Pekerjaan:* " + job + " | 💍 *Status:* " + status + "\n" +
+                          "💵 *Pendapatan:* " + income + "\n" +
+                          "💰 *Bajet:* " + budget + "\n" +
+                          "🛡️ *Pelan Pilihan:* " + plan + "\n" +
+                          "📋 *Polisi Aktif:* " + policy;
+            
+            // Append optional message if they wrote one
+            if(addMessage.trim() !== "") {
+                message += "\n\n📝 *Nota Tambahan:*\n" + addMessage;
+            } else {
+                message += "\n\nMohon bantu saya untuk sediakan sebut harga yang sesuai.";
+            }
                           
             var encodedMessage = encodeURIComponent(message);
             var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
