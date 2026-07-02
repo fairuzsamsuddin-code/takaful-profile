@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex; 
+            justify-content: center; 
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 400px; 
+            width: 100%; 
+            text-align: center; 
+            box-sizing: border-box;
+        }
+        .profile-pic { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 10px;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 10px 0 5px 0; font-size: 24px; color: #1a1a1a; font-weight: 700; }
+        .subtitle { color: #d32f2f; font-weight: 600; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f2f5;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.2s ease;
+        }
+        .social-icon:hover { background: #e4e6eb; transform: scale(1.1); }
+        .company-logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .bio-text { color: #555; margin-bottom: 30px; line-height: 1.6; font-size: 14px; }
+        .btn-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .link-btn { 
+            display: block; 
+            background: #f8f9fa; 
+            color: #333; 
+            text-decoration: none; 
+            padding: 14px; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            font-size: 15px;
+            border: 1px solid #e1e4e8;
+            transition: all 0.2s ease; 
+        }
+        .link-btn:hover { background: #e9ecef; }
+        .whatsapp-btn { background: #25D366; color: white; border: none; }
+        .whatsapp-btn:hover { background: #1ebd5a; }
+        .features-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+        .feature-item {
+            font-size: 11px;
+            font-weight: 600;
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            flex: 1;
+        }
+        .feature-item i { font-size: 18px; color: #0070f3; background: #e1f0ff; padding: 10px; border-radius: 50%; }
+        .section-title {
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .section-subtitle {
+            text-align: left;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .section-subtitle i { color: #d32f2f; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .grid-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            padding: 15px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+        }
+        .grid-card:hover { border-color: #0070f3; transform: translateY(-3px); }
+        .grid-card i { font-size: 20px; color: #d32f2f; }
+        .form-section {
+            background: #f9fbff;
+            padding: 25px 20px;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid #eef2f7;
+            margin-bottom: 30px;
+        }
+        .badge {
+            background: #ffebee;
+            color: #d32f2f;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .form-section h3 { font-size: 18px; margin: 0 0 8px 0; color: #1a1a1a; }
+        .form-section p { font-size: 12px; margin-bottom: 20px; color: #555; }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #dfe3e8;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 13px;
+            background-color: #fff;
+        }
+        input:focus, select:focus { outline: none; border-color: #0070f3; }
+        .form-submit-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .footer {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 11px;
+            color: #888;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Fairuz Samsuddin</h1>
+        <p class="subtitle">Your No 1 Takaful Consultant</p>
+
+        <div class="social-row">
+            <a href="https://facebook.com/yourprofile" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/yourprofile" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://threads.net/@yourprofile" class="social-icon" target="_blank"><i class="fab fa-threads"></i></a>
+            <a href="https://tiktok.com/@yourprofile" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <img src="company-logo.jpg" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
+
+        <p class="bio-text">Sedia bantu tuan/puan untuk dapatkan consultation & quotation takaful yang comprehensive</p>
+        
+        <div class="btn-row">
+            <a href="#borang-semakan" class="link-btn"><i class="fas fa-clipboard-check"></i> Semak Pelan Sesuai</a>
+            <a href="https://wa.me/60176213432" class="link-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Saya</a>
+        </div>
+
+        <div class="features-row">
+            <div class="feature-item">
+                <i class="fas fa-shield-halved"></i>
+                <span>Patuh Syariah</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-mug-hot"></i>
+                <span>Sesi Santai</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-wallet"></i>
+                <span>Bajet Mesra</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
+        <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
+        
+        <div class="grid-container">
+            <div class="grid-card">
+                <i class="fas fa-heartbeat"></i>
+                <span>Medical Card</span>
+            </div>
+            <div class="grid-card">
+                <i class="fas fa-gift"></i>
+                <span>Hibah</span>
+            </div>
+            <div class="grid-card">
+                <i class="fas fa-briefcase"></i>
+                <span>Income Protection</span>
+            </div>
+            <div class="grid-card">
+                <i class="fas fa-user-md"></i>
+                <span>Sakit Kritikal</span>
+            </div>
+        </div>
+
+        <div class="form-section" id="borang-semakan">
+            <span class="badge">Konsultasi Percuma</span>
+            <h3>Semak Pelan Takaful Sesuai</h3>
+            <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp.</p>
+            
+            <form id="takafulForm">
+                <input type="text" id="clientName" placeholder="Nama Penuh" required>
+                <input type="number" id="clientAge" placeholder="Umur (Tahun)" required>
+                
+                <select id="clientStatus" required>
+                    <option value="" disabled selected>Status Pekerjaan / Merokok</option>
+                    <option value="Bekerja (Tidak Merokok)">Bekerja (Tidak Merokok)</option>
+                    <option value="Bekerja (Merokok)">Bekerja (Merokok)</option>
+                    <option value="Pelajar / Suri Rumah">Pelajar / Suri Rumah</option>
+                    <option value="Bekerja Sendiri / Bisnes">Bekerja Sendiri / Bisnes</option>
+                </select>
+
+                <input type="number" id="clientBudget" placeholder="Anggaran Bajet Bulanan (RM)" required>
+
+                <button type="submit" class="link-btn whatsapp-btn form-submit-btn">Semak Sekarang</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Fairuz Samsuddin. Hak Cipta Terpelihara.</p>
+            <p>Pengantara Takaful Berdaftar dengan Prudential BSN Takaful Berhad.</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('takafulForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            var name = document.getElementById('clientName').value;
+            var age = document.getElementById('clientAge').value;
+            var status = document.getElementById('clientStatus').value;
+            var budget = document.getElementById('clientBudget').value;
+            
+            // ---> UPDATE YOUR PHONE NUMBER HERE <---
+            var phoneNumber = "60176213432"; 
+            
+            var message = "Hai, saya berminat untuk buat semakan pelan Takaful percuma. Ini butiran saya:\n\n" +
+                          "👤 *Nama:* " + name + "\n" +
+                          "🎂 *Umur:* " + age + " tahun\n" +
+                          "💼 *Status:* " + status + "\n" +
+                          "💰 *Bajet:* RM" + budget + " sebulan\n\n" +
+                          "Mohon bantu saya untuk sediakan sebut harga (quotation) yang sesuai.";
+                          
+            var encodedMessage = encodeURIComponent(message);
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+
+</body>
+</html>
