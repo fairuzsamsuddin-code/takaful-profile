@@ -520,7 +520,7 @@
                         </div>
                         <div class="form-group" style="margin-bottom: 0;">
                             <label class="form-label">Tarikh Lahir <span class="required">*</span></label>
-                            <input type="text" id="clientDob" placeholder="Contoh: 12/05/1990" required>
+                            <input type="text" id="clientDob" placeholder="Contoh: 12/05/1990" maxlength="10" required>
                         </div>
                     </div>
 
@@ -632,7 +632,7 @@
         </div>
     </div>
 
-    <!-- SCRIPT (Identical functionality) -->
+    <!-- SCRIPT -->
     <script>
         function selectPlan(planName, clickedElement) {
             var cards = document.querySelectorAll('.grid-card');
@@ -646,6 +646,25 @@
 
             document.getElementById('borang-semakan').scrollIntoView({ behavior: 'smooth' });
         }
+
+        // Auto-format Date of Birth field with slashes (DD/MM/YYYY)
+        const dobInput = document.getElementById('clientDob');
+        dobInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove all non-digits
+            
+            if (value.length > 8) {
+                value = value.slice(0, 8); // Restrict to max 8 digits
+            }
+
+            // Insert slashes automatically
+            if (value.length >= 5) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4) + '/' + value.slice(4);
+            } else if (value.length >= 3) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            }
+
+            e.target.value = value;
+        });
 
         document.getElementById('takafulForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
