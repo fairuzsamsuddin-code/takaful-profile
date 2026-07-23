@@ -23,13 +23,111 @@
             color: #333;
         }
 
+        /* --- Top Navigation Bar --- */
+        .top-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background-color: #D9000D; /* PruBSN Red */
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px; /* Squircle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .brand-text strong {
+            color: #D9000D;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text span {
+            color: #777;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a i {
+            font-size: 16px;
+            color: #999;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover, .nav-links a:hover i {
+            color: #D9000D;
+        }
+
+        .nav-whatsapp {
+            background-color: #D9000D;
+            color: white;
+            text-decoration: none;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-whatsapp:hover {
+            background-color: #c81625;
+            color: white;
+        }
+
         /* --- Page Header Section (Portal Header Look) --- */
         .page-header {
             background-color: #f8f9fa;
             width: 100%;
             padding: 20px 40px;
             box-sizing: border-box;
-            border-bottom: 2px solid #D9000D; /* Precise PruBSN Red from reference */
+            border-bottom: 2px solid #D9000D; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -72,6 +170,7 @@
             grid-template-columns: auto 1fr;
             gap: 25px;
             align-items: center;
+            scroll-margin-top: 90px;
         }
         
         .profile-pic-container {
@@ -170,6 +269,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
             padding: 40px;
             box-sizing: border-box;
+            scroll-margin-top: 90px;
         }
         .section-header { margin-bottom: 30px;}
         .section-title { text-align: left; font-size: 24px; font-weight: 700; margin: 0 0 5px 0; color: #1a1a1a;}
@@ -197,6 +297,7 @@
             overflow: hidden;
             box-sizing: border-box;
             border: 1px solid #eaeaea;
+            scroll-margin-top: 90px;
         }
         .form-top {
             background-color: #D9000D;
@@ -256,11 +357,37 @@
         .footer-col { text-align: center;}
         .footer-logo { max-width: 120px; margin-bottom: 10px; }
 
-        /* --- RESPONSIVE ADAPTATIONS FOR WIDE & HORIZONTAL SCREENS (Kept same) --- */
+        /* --- RESPONSIVE ADAPTATIONS FOR WIDE & HORIZONTAL SCREENS --- */
         @media (min-width: 650px) {
             .page-content { gap: 40px; }
             .btn-row { flex-direction: row; }
             .grid-container { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* Responsive for Top Nav */
+        @media (max-width: 950px) {
+            .top-nav {
+                padding: 12px 20px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            .nav-brand {
+                margin-right: auto;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: space-around;
+                border-top: 1px solid #eaeaea;
+                padding-top: 15px;
+                gap: 10px;
+            }
+            .nav-links a span {
+                display: none; 
+            }
+            .nav-links a i {
+                font-size: 20px;
+            }
         }
 
         /* Responsive for mobile screens */
@@ -279,7 +406,7 @@
             .footer-col { text-align: center; justify-items: center;}
         }
 
-        /* Sideways mobile (kept same) */
+        /* Sideways mobile */
         @media (orientation: landscape) and (max-width: 900px) {
             .page-header { flex-direction: row; text-align: center; justify-content: space-around;}
             .profile-pic-container { width: 120px; height: 120px; }
@@ -291,6 +418,29 @@
     </style>
 </head>
 <body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <div class="brand-icon"><i class="fas fa-headset"></i></div>
+            <div class="brand-text">
+                <strong>SERVICE</strong>
+                <span>by Fairuz · Takaful</span>
+            </div>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#profil" title="Profil"><i class="far fa-user"></i> <span>Profil</span></a>
+            <a href="#pilihan-pelan" title="Pilihan Pelan"><i class="fas fa-hand-holding-heart"></i> <span>Pilihan Pelan</span></a>
+            <a href="#borang-semakan" title="Borang Semakan"><i class="far fa-clipboard"></i> <span>Borang Semakan</span></a>
+        </div>
+        
+        <div class="nav-cta">
+            <a href="https://wa.me/60176213432" target="_blank" class="nav-whatsapp">
+                <i class="fab fa-whatsapp" style="font-size: 16px;"></i> WhatsApp
+            </a>
+        </div>
+    </nav>
 
     <!-- Page Header (New Portal Header) -->
     <div class="page-header">
@@ -304,7 +454,7 @@
     <div class="page-content">
 
         <!-- Profile Section -->
-        <div class="profile-section">
+        <div class="profile-section" id="profil">
             <div class="profile-pic-container">
                 <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
             </div>
@@ -341,7 +491,7 @@
         </div>
 
         <!-- Selection Grid Section -->
-        <div class="selection-section">
+        <div class="selection-section" id="pilihan-pelan">
             <div class="section-header">
                 <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
                 <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
